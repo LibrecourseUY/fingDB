@@ -18,7 +18,7 @@ from app.models.materia import (
     Instituto,
 )
 from app.schemas.materia import PeriodoEnum, MateriaRead
-from app.dependencies import verify_api_key
+from app.dependencies import verify_token_dep, get_current_user_or_none
 
 
 def parse_ids(s: Optional[str]) -> List[int]:
@@ -59,7 +59,7 @@ async def get_form_data(request: Request) -> dict:
 @materia_router.post("", response_model=MateriaRead, status_code=201)
 async def create_materia(
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     data = await get_form_data(request)
@@ -115,7 +115,7 @@ async def create_materia(
 async def update_materia(
     id: int,
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     data = await get_form_data(request)
@@ -179,7 +179,6 @@ async def update_materia(
 @materia_router.get("/{id}", response_model=MateriaRead)
 async def get_materia(
     id: int,
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Materia).where(Materia.id == id))
@@ -193,7 +192,6 @@ async def get_materia(
 async def get_materias(
     limit: int = 100,
     offset: int = 0,
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await materia_crud.get_multi(
@@ -206,7 +204,6 @@ async def get_materias(
 
 @materia_router.get("/all/con-previas")
 async def get_all_materias_con_previas(
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(
@@ -257,7 +254,7 @@ async def get_all_materias_con_previas(
 @materia_router.delete("/{id}", status_code=204)
 async def delete_materia(
     id: int,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Materia).where(Materia.id == id))
@@ -272,7 +269,6 @@ async def delete_materia(
 @materia_router.get("/options")
 async def get_options(
     q: str = "",
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     query = select(Materia.id, Materia.name)
@@ -292,7 +288,7 @@ carrera_router = APIRouter(prefix="/carreras", tags=["Carreras"])
 @carrera_router.post("", status_code=201)
 async def create_carrera(
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     data = await get_form_data(request)
@@ -331,7 +327,6 @@ async def create_carrera(
 
 @carrera_router.get("")
 async def get_carreras(
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Carrera).order_by(Carrera.name))
@@ -380,7 +375,6 @@ async def get_carreras(
 @carrera_router.get("/{id}")
 async def get_carrera(
     id: int,
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Carrera).where(Carrera.id == id))
@@ -422,7 +416,7 @@ async def get_carrera(
 async def update_carrera(
     id: int,
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Carrera).where(Carrera.id == id))
@@ -473,7 +467,7 @@ async def update_carrera(
 @carrera_router.delete("/{id}", status_code=204)
 async def delete_carrera(
     id: int,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Carrera).where(Carrera.id == id))
@@ -495,7 +489,7 @@ perfil_router = APIRouter(prefix="/perfiles", tags=["Perfiles"])
 @perfil_router.post("", status_code=201)
 async def create_perfil(
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     data = await get_form_data(request)
@@ -535,7 +529,6 @@ async def create_perfil(
 @perfil_router.get("/by-carrera/{carrera_id}")
 async def get_perfiles_by_carrera(
     carrera_id: int,
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Perfil).where(Perfil.carrera_id == carrera_id))
@@ -573,7 +566,7 @@ async def get_perfiles_by_carrera(
 async def update_perfil(
     id: int,
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Perfil).where(Perfil.id == id))
@@ -614,7 +607,7 @@ async def update_perfil(
 @perfil_router.delete("/{id}", status_code=204)
 async def delete_perfil(
     id: int,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Perfil).where(Perfil.id == id))
@@ -645,7 +638,7 @@ instituto_router = APIRouter(prefix="/institutos", tags=["Institutos"])
 @instituto_router.post("", status_code=201)
 async def create_instituto(
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     data = await get_form_data(request)
@@ -663,7 +656,6 @@ async def create_instituto(
 
 @instituto_router.get("")
 async def get_institutos(
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Instituto).order_by(Instituto.name))
@@ -674,7 +666,6 @@ async def get_institutos(
 @instituto_router.get("/{id}")
 async def get_instituto(
     id: int,
-    _: str = Depends(verify_api_key),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Instituto).where(Instituto.id == id))
@@ -688,7 +679,7 @@ async def get_instituto(
 async def update_instituto(
     id: int,
     request: Request,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Instituto).where(Instituto.id == id))
@@ -709,7 +700,7 @@ async def update_instituto(
 @instituto_router.delete("/{id}", status_code=204)
 async def delete_instituto(
     id: int,
-    _: str = Depends(verify_api_key),
+    _: str = Depends(verify_token_dep),
     db: AsyncSession = Depends(get_session),
 ):
     result = await db.execute(select(Instituto).where(Instituto.id == id))
