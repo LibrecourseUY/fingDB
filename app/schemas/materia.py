@@ -22,6 +22,7 @@ class TipoPreviaEnum(str, Enum):
 
 class MateriaBase(BaseModel):
     name: str
+    codigo: Optional[str] = None
     periodo: PeriodoEnum
     creditos: int = 0
     instituto_id: int
