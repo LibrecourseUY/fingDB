@@ -1,8 +1,9 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import os
+import mimetypes
 
 from app.crud.materia import (
     materia_router,
@@ -71,6 +72,15 @@ async def auth_verify(request: Request):
     return {"valid": False}
 
 
+@app.get("/graph.js")
+async def serve_graph_js(request: Request):
+    return FileResponse(
+        "app/templates/graph.js",
+        media_type="application/javascript",
+        headers={"Cache-Control": "no-cache, no-store, must-revalidate"},
+    )
+
+
 @app.get("/")
 async def root(request: Request):
     path = request.url.path
@@ -81,8 +91,6 @@ async def root(request: Request):
         return FileResponse("app/templates/index.html")
     elif path.startswith("/admin/"):
         return FileResponse("app/templates/index.html")
-    elif path.endswith(".js"):
-        return FileResponse(f"app/templates/{path}")
     else:
         return FileResponse("app/templates/graph.html")
 
@@ -91,12 +99,16 @@ async def root(request: Request):
 async def catch_all(full_path: str, request: Request):
     path = request.url.path
 
-    if path == "/" or path == "" or path.startswith("/index") or path == "/graph":
+    if path == "/graph.js":
+        return FileResponse(
+            "app/templates/graph.js",
+            media_type="application/javascript",
+            headers={"Cache-Control": "no-cache, no-store, must-revalidate"},
+        )
+    elif path == "/" or path == "" or path.startswith("/index") or path == "/graph":
         return FileResponse("app/templates/graph.html")
     elif path == "/admin" or path.startswith("/admin/"):
         return FileResponse("app/templates/index.html")
-    elif path.endswith(".js"):
-        return FileResponse(f"app/templates/{path}")
     elif path.startswith("/static/"):
         return FileResponse("app/templates/graph.html")
     else:

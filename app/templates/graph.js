@@ -3,6 +3,7 @@ const API_CONFIG = {
     const path = window.location.pathname;
     const lastSlash = path.lastIndexOf('/');
     const basePath = lastSlash > 0 ? path.substring(0, lastSlash) : path;
+    console.log('API_URL base:', basePath, 'path:', path);
     return basePath || '/';
   })(),
   getToken: function() {

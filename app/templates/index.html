@@ -514,6 +514,9 @@
             return basePath || '/';
         })();
         
+        console.log('BASE_URL:', BASE_URL);
+        console.log('Current path:', window.location.pathname);
+        
         function getToken() {
             return localStorage.getItem('access_token') || '';
         }
