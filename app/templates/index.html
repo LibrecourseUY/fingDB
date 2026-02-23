@@ -507,7 +507,11 @@
     </div>
 
     <script>
-        const BASE_URL = '';
+        const BASE_URL = (function() {
+            const path = window.location.pathname;
+            const basePath = path.substring(0, path.lastIndexOf('/')) || '/';
+            return basePath;
+        })();
         
         function getToken() {
             return localStorage.getItem('access_token') || '';

@@ -1,5 +1,9 @@
 const API_CONFIG = {
-  apiUrl: '',
+  apiUrl: (function() {
+    const path = window.location.pathname;
+    const basePath = path.substring(0, path.lastIndexOf('/')) || '/';
+    return basePath;
+  })(),
   getToken: function() {
     return localStorage.getItem('access_token') || '';
   }
