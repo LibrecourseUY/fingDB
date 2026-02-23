@@ -35,7 +35,9 @@ materia_router = APIRouter(prefix="/materias", tags=["Materias"])
 class MateriaConPrevias(BaseModel):
     id: int
     name: str
+    codigo: Optional[str] = None
     periodo: PeriodoEnum
+    creditos: int = 0
     active: bool
     created_at: str
     updated_at: Optional[str]
@@ -237,6 +239,7 @@ async def get_all_materias_con_previas(
             {
                 "id": m.id,
                 "name": m.name,
+                "codigo": m.codigo,
                 "periodo": m.periodo.value,
                 "creditos": m.creditos,
                 "instituto_id": m.instituto_id,
