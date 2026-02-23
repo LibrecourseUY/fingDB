@@ -2,7 +2,6 @@
 .gitignore
 .venv
 .ruff_cache
-.env
 *.db
 *.pyc
 __pycache__
