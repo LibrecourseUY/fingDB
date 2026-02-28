@@ -1,8 +1,10 @@
 # Contributor License Agreement (CLA)
 
-LibrecourseUY
+## LibrecourseUY
 
-Última actualización: 28 de Febrero de 2026 (Versión 1.1)
+Última actualización: 28 de Febrero de 2026 (Versión 1.2)
+
+---
 
 ## 1. Naturaleza del Proyecto
 
@@ -10,63 +12,75 @@ LibrecourseUY es una iniciativa independiente, comunitaria y sin fines de lucro,
 
 LibrecourseUY:
 
-- No constituye entidad jurídica formal.
-- No actúa en representación de ninguna institución.
-- No mantiene vínculo contractual con instituciones académicas.
-- Opera de forma voluntaria y abierta.
+* No constituye entidad jurídica formal.
+* No actúa en representación de ninguna institución.
+* No mantiene vínculo contractual con instituciones académicas.
+* Opera de forma voluntaria y abierta.
+
+---
 
 ## 2. No Afiliación Institucional
 
 LibrecourseUY no está afiliada, patrocinada, avalada, autorizada ni respaldada oficialmente por ninguna institución académica o dependencia gubernamental.
 
-> ⚠️ Cualquier interpretación de oficialidad es incorrecta.
+⚠️ Cualquier interpretación de oficialidad es incorrecta.
+
+---
 
 ## 3. Definición de Contribución
 
 Se considera "Contribución" cualquier envío intencional a repositorios de LibrecourseUY, incluyendo:
 
-- Código fuente
-- Documentación
-- Scripts
-- Infraestructura
-- Assets gráficos
-- Configuración
-- Archivos multimedia
-- Contenido protegido por derechos de autor
+* Código fuente
+* Documentación
+* Scripts
+* Infraestructura
+* Assets gráficos
+* Configuración
+* Archivos multimedia
+* Contenido protegido por derechos de autor
+
+---
 
 ## 4. Declaraciones y Garantías del Contribuyente
 
 Al contribuir, usted declara que:
 
-- Es autor original de la Contribución o posee derechos suficientes para licenciarla.
-- La Contribución no infringe derechos de terceros.
-- No está violando acuerdos laborales, académicos o contractuales.
-- No incluye información confidencial.
-- No incorpora licencias incompatibles con MIT sin autorización expresa.
+* Es autor original de la Contribución o posee derechos suficientes para licenciarla.
+* La Contribución no infringe derechos de terceros.
+* No está violando acuerdos laborales, académicos o contractuales.
+* No incluye información confidencial.
+* No incorpora licencias incompatibles con MIT sin autorización expresa.
 
 Si usted es estudiante o funcionario de una institución académica, declara que la Contribución no constituye propiedad institucional exclusiva ni material desarrollado bajo obligación contractual incompatible con este Acuerdo.
+
+---
 
 ## 5. Licenciamiento de Contribuciones
 
 Salvo indicación expresa en un repositorio específico:
 
-- Todas las Contribuciones se integrarán bajo licencia **MIT**.
+Todas las Contribuciones se integrarán bajo licencia **MIT**.
 
 El Contribuyente otorga:
 
-- Licencia perpetua
-- Mundial
-- No exclusiva
-- Irrevocable
-- Libre de regalías
+* Licencia perpetua
+* Mundial
+* No exclusiva
+* Irrevocable
+* Libre de regalías
 
 Para usar, modificar, distribuir y sublicenciar la Contribución bajo MIT.
 
-> 📝 Este Acuerdo no implica cesión total de copyright.
+Este Acuerdo no implica cesión total de copyright.
+
+---
 
 ## 6. Licencia de Patentes
 
 En caso de que la Contribución incluya derechos patentables de su titularidad, usted concede licencia mundial, irrevocable y libre de regalías necesaria para ejercer los derechos otorgados bajo MIT.
+
+---
 
 ## 7. Política Marcaria y de Identidad Institucional
 
@@ -74,11 +88,11 @@ En caso de que la Contribución incluya derechos patentables de su titularidad, 
 
 Este Acuerdo no otorga licencia sobre:
 
-- El nombre "LibrecourseUY"
-- Nombres de repositorios
-- Dominios
-- Identidad visual del proyecto
-- Marcas o signos institucionales de terceros
+* El nombre "LibrecourseUY"
+* Nombres de repositorios
+* Dominios
+* Identidad visual del proyecto
+* Marcas o signos institucionales de terceros
 
 La licencia MIT no constituye licencia marcaria.
 
@@ -86,10 +100,10 @@ La licencia MIT no constituye licencia marcaria.
 
 Salvo autorización escrita verificable, está prohibido incorporar:
 
-- Logotipos oficiales de instituciones
-- Escudos o sellos institucionales
-- Identidad visual institucional
-- Material gráfico que sugiera oficialidad
+* Logotipos oficiales de instituciones
+* Escudos o sellos institucionales
+* Identidad visual institucional
+* Material gráfico que sugiera oficialidad
 
 Los mantenedores podrán eliminar cualquier contenido que genere riesgo de confusión institucional.
 
@@ -97,63 +111,253 @@ Los mantenedores podrán eliminar cualquier contenido que genere riesgo de confu
 
 Queda prohibido:
 
-- Presentar repositorios como "oficiales".
-- Utilizar expresiones como "avalado por", "institucional", "certificado por".
-- Diseñar interfaces que simulen canales oficiales.
+* Presentar repositorios como "oficiales".
+* Utilizar expresiones como "avalado por", "institucional", "certificado por".
+* Diseñar interfaces que simulen canales oficiales.
 
 ### 7.4 Facultad de medidas correctivas y rebranding
 
 Para mitigar riesgos legales, LibrecourseUY podrá:
 
-- Modificar nombres de repositorios.
-- Cambiar identidad visual.
-- Retirar contenidos.
-- Exigir correcciones.
-- Renombrar la organización si fuera necesario.
+* Modificar nombres de repositorios.
+* Cambiar identidad visual.
+* Retirar contenidos.
+* Exigir correcciones.
+* Renombrar la organización si fuera necesario.
 
-> ⚠️ Estas medidas no generan compensación ni reclamo por parte de los contribuyentes.
+Estas medidas no generan compensación ni derecho a reclamo.
 
-## 8. Firma criptográfica obligatoria (GPG)
+---
 
-Para contribuir a LibrecourseUY es **obligatorio**:
+# 8. Gobernanza del Proyecto
 
-- Firmar todos los commits con clave GPG válida.
-- Mantener coherencia entre identidad GitHub y firma criptográfica.
+## 8.1 Propósito
 
-La firma GPG constituye:
+Esta sección describe cómo se organiza LibrecourseUY, cómo se toman decisiones y cómo se gestionan responsabilidades comunitarias.
 
-- Manifestación electrónica de aceptación de este CLA.
-- Reconocimiento de autoría.
-- Consentimiento a los términos aquí establecidos.
+Complementa, pero no reemplaza:
 
-> ⚠️ Contribuciones sin firma válida podrán ser rechazadas.
+* CONTRIBUTING.md
+* CODE_OF_CONDUCT.md
+* TRADEMARK.md
+* Documentación específica de cada repositorio
 
-## 9. Ausencia de Relación Jurídica
+---
 
-Contribuir a LibrecourseUY:
+## 8.2 Carácter Comunitario
 
-- No genera relación laboral.
-- No genera compensación económica.
-- No crea sociedad ni asociación jurídica.
-- No implica representación institucional.
+LibrecourseUY es una comunidad open source:
 
-## 10. Exención de Responsabilidad
+* Independiente
+* No institucional
+* Impulsada por la comunidad
 
-El software se proporciona "AS IS", sin garantías de ningún tipo.
+Existe para crear, mantener y difundir recursos abiertos para el bien público.
 
-LibrecourseUY y sus mantenedores no serán responsables por daños directos o indirectos derivados del uso del software.
+---
 
-## 11. Irrevocabilidad
+## 8.3 Principios de Gobernanza
 
-Una vez integrada una Contribución, la licencia otorgada es irrevocable salvo falsedad en las declaraciones realizadas por el Contribuyente.
+El proyecto se rige por:
 
-## 12. Aceptación
+* Apertura
+* Claridad
+* Respeto
+* Practicidad
+* Responsabilidad
+* Protección del proyecto
+
+Los mantenedores podrán actuar para proteger:
+
+* Calidad técnica
+* Salud comunitaria
+* Seguridad jurídica
+* Carácter no institucional
+
+---
+
+## 8.4 Roles
+
+### Contribuyentes
+
+Participan mediante:
+
+* Issues
+* Pull Requests
+* Documentación
+* Reportes
+* Propuestas
+
+Deben cumplir las normas del proyecto.
+
+### Mantenedores
+
+Responsables de uno o más repositorios.
+
+Pueden:
+
+* Revisar y fusionar PRs
+* Cerrar o priorizar issues
+* Solicitar cambios
+* Moderar discusiones
+* Gestionar releases
+* Actuar ante riesgos legales o técnicos
+
+Deben actuar de buena fe y razonablemente.
+
+### Administradores de la Organización
+
+Pueden:
+
+* Gestionar configuración global
+* Crear o archivar repositorios
+* Designar o remover mantenedores
+* Resolver disputas inter-repositorio
+* Actuar ante riesgos legales, de seguridad o identidad
+
+---
+
+## 8.5 Toma de Decisiones
+
+Siempre que sea posible:
+
+Las decisiones se tomarán mediante discusión abierta y consenso razonable.
+
+No se requiereunanimidad.
+
+En ausencia de consenso en plazo razonable, el mantenedor o administrador competente podrá decidir y documentar cuando corresponda.
+
+---
+
+## 8.6 Alcance de Autoridad
+
+Los mantenedores pueden rechazar contribuciones que sean:
+
+* Fuera de alcance
+* De baja calidad
+* Legalmente riesgosas
+* Engañosas respecto a autoría
+* Incompatibles con estándares
+* Perjudiciales para la sostenibilidad
+
+---
+
+## 8.7 Autonomía de Repositorios
+
+Cada repositorio puede tener reglas adicionales técnicas, siempre que no contradigan:
+
+* Normas de conducta
+* Requisitos legales de contribución
+* Protección de identidad
+* Decisiones de gobernanza organizacional
+
+---
+
+## 8.8 Designación y Remoción de Mantenedores
+
+No existe derecho automático a ser mantenedor.
+
+Puede designarse en función de:
+
+* Contribuciones sostenidas
+* Juicio técnico
+* Colaboración respetuosa
+* Alineación con objetivos
+
+El acceso podrá ser removido por:
+
+* Inactividad
+* Mal uso de permisos
+* Incumplimiento de normas
+* Conducta perjudicial
+* Riesgos de seguridad
+
+Estas decisiones pueden adoptarse como medida de gobernanza práctica.
+
+---
+
+## 8.9 Autoridad de Emergencia
+
+En situaciones urgentes, los mantenedores o administradores podrán actuar inmediatamente ante:
+
+* Incidentes de seguridad
+* Código malicioso
+* Amenazas legales
+* Suplantación
+* Riesgo de confusión institucional
+* Acoso
+
+Podrá brindarse explicación posterior cuando sea apropiado.
+
+---
+
+## 8.10 Relación con Instituciones
+
+La participación de estudiantes o funcionarios de una institución:
+
+NO convierte a LibrecourseUY en parte de dicha institución.
+
+Ningún participante puede alegar representación institucional sin autorización expresa y verificable.
+
+---
+
+## 8.11 Modificaciones a la Gobernanza
+
+La gobernanza podrá actualizarse conforme evolucione la comunidad.
+
+Los cambios podrán ser adoptados por mantenedores o administradores competentes y comunicados cuando corresponda.
+
+---
+
+## 9. Firma criptográfica obligatoria (GPG)
+
+Es obligatorio:
+
+* Firmar todos los commits con clave GPG válida.
+* Mantener coherencia entre identidad GitHub y firma.
+
+La firma constituye:
+
+* Aceptación electrónica de este CLA.
+* Reconocimiento de autoría.
+* Consentimiento a sus términos.
+
+Contribuciones sin firma válida podrán ser rechazadas.
+
+---
+
+## 10. Ausencia de Relación Jurídica
+
+Contribuir no:
+
+* Genera relación laboral.
+* Genera compensación económica.
+* Crea sociedad o asociación.
+* Implica representación institucional.
+
+---
+
+## 11. Exención de Responsabilidad
+
+El software se proporciona "AS IS", sin garantías.
+
+LibrecourseUY y sus mantenedores no serán responsables por daños derivados de su uso.
+
+---
+
+## 12. Irrevocabilidad
+
+La licencia otorgada es irrevocable una vez integrada la Contribución, salvo falsedad en declaraciones del Contribuyente.
+
+---
+
+## 13. Aceptación
 
 Se considera aceptado este CLA al:
 
-- Enviar un Pull Request con commits firmados criptográficamente.
-- Contribuir contenido que sea incorporado al repositorio.
-- Manifestar aceptación electrónica si el sistema lo requiere.
+* Enviar Pull Request con commits firmados.
+* Contribuir contenido incorporado.
+* Manifestar aceptación electrónica si el sistema lo requiere.
 
 ---
 

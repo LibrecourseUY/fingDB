@@ -21,7 +21,7 @@ Be respectful to all contributors. Let's keep the community open and welcoming.
 
 ### Step 1: Fork
 
-1. Go to: https://github.com/fingdev/fingdb
+1. Go to: https://github.com/LibrecourseUY/fingdb
 2. Click "Fork"
 3. Select your account
 
