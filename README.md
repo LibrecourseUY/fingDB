@@ -34,7 +34,7 @@ Basically, it's the "brain" that holds data shared between the various Librecour
 
 2. Install dependencies with uv:
    ```bash
-   uv install
+   uv sync
    ```
 
 3. Configure environment variables:

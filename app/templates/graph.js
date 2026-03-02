@@ -127,6 +127,15 @@ createApp({
     const carreras = ref([]);
     const perfiles = ref([]);
     
+    // Disclaimer state
+    const DISCLAIMER_STORAGE_KEY = 'fingdb_terms_accepted';
+    const showDisclaimer = ref(!localStorage.getItem(DISCLAIMER_STORAGE_KEY));
+
+    const acceptDisclaimer = () => {
+        localStorage.setItem(DISCLAIMER_STORAGE_KEY, 'true');
+        showDisclaimer.value = false;
+    };
+
     // Authentication state
     const isLoggedIn = ref(false);
     const showLoginModal = ref(false);
@@ -1328,7 +1337,9 @@ createApp({
       capitalize,
       doLogin,
       logout,
-      goToAdmin
+      goToAdmin,
+      showDisclaimer,
+      acceptDisclaimer
     };
   }
 }).mount('#app');
